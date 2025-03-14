@@ -1,0 +1,163 @@
+.hhh {
+
+font-family: "Poppins", sans-serif;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.container {
+    width: 360px;
+    padding: 30px;
+    background-color: hsl(257, 40%, 49%);
+    position: relative;
+    z-index: -1;
+}
+
+.container::before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    background-image: url(./bg-mobile.svg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.container .logo {
+    width: 120px;
+}
+
+.container .logo img {
+    width: 100%;
+}
+
+.container .info .left {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.container .info .left img {
+    width: 100%;
+}
+
+.container .info .right {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.right h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    line-height: 1.4;
+}
+
+.right p {
+    margin: 20px 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.right button {
+    width: 60%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 0 0 10px hsl(257, 40%, 40%);
+}
+
+.container .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.icons i {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 376px) {
+    .container {
+        width: 100%;
+        /* padding: 30px 40px; */
+    }
+
+    .container::before {
+        background-image: url(./bg-desktop.svg);
+    }
+
+    .container .logo {
+        width: 150px;
+    }
+
+    .container .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .container .left img {
+        display: block;
+    }
+
+    .container .info .right {
+        width: 70%;
+        text-align: left;
+    }
+
+    .info .right h3 {
+        font-size: 40px;
+    }
+
+    .info .right p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .info .right button {
+        width: 40%;
+        padding: 20px;
+    }
+
+    .container .icons {
+        justify-content: end;
+        gap: 20px;
+    }
+
+    .container .icons i {
+        width: 35px;
+        height: 35px;
+    }
+}
+
